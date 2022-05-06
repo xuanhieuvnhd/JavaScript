@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="data" style="background: blanchedalmond" size="50px"
+       onclick="alert('Niềm tin chiến thắng sẽ đưa ta đến bến bờ vui (^.^)!')">
+<p id="htc"></p>
+<button style="background:gold" onclick="getData()">Lấy dữ liệu</button>
+<button style="background: aqua" onclick="getInput()">Nhập đầu vào</button>
+<button style="background:rosybrown" onclick="demo()">Viết thử</button>
+<button style="background:tomato" onclick="demo1()">Thứ nghiệm</button>
+</body>
+<script>
+    function getData() {
+        //hàm nhập vào sử dụng hàm có sẵn prompt
+        let data = prompt("Nhập cái éo gì cũng được...")
+        //hàm xuất dữ liệu sử dụng console
+        console.log(htc)
+    }
+
+    function getInput() {
+        //hàm lấy dữ liệu của input thông qua id
+        let data = document.getElementById("htc").value
+        //hàm xuất dạng dialog box trên màn hình
+        // alert(data)
+        //hàm xuất dạng dialog box trên màn hình, trả về giá trị đúng sai
+        console.log(confirm(htc))
+
+    }
+
+    function demo() {
+        //xóa các thành phần trên màn hình và viết lại giá trị trong write
+        document.write("việt nam muôn năm")
+    }
+
+    function demo1() {""
+        //thay thế giá trị của thành phần mang id được chỉ định
+        // document.getElementById("result").innerText = "<b>C0422H1</b>"
+        document.getElementById("htc").innerHTML = "<b>I love you chịch chịch</b>"
+    }
+
+</script>
+</html>
