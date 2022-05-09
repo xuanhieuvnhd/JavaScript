@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>Bien va toan tu
+<body>
+<hr>
+<label for="ly">Vật Lý</label><input type="number" id="ly">
+<br>
+<label for="hoa">Hóa Học</label><input type="number" id="hoa">
+<br>
+<label for="sinh">Sinh Học</label><input type="number" id="sinh">
+<br>
+<span id="diem"></span>
+<br><br>
+<button id="diemtb" onclick="diemTb()">Điểm Trung Bình</button>
+<br><br>
+<button id="tong" onclick="tong()">Tổng Điểm</button>
+<br>
+<script>
+    let x,y,z
+    function diemTb() {
+        x = Number(document.getElementById('ly').value) ;
+        y = Number(document.getElementById('hoa').value) ;
+        z = Number(document.getElementById('sinh').value) ;
+        let diemtb = (x+y+z)/3 ;
+        document.getElementById('diem').innerHTML = diemtb;
+    }
+    function tong() {
+        x = Number(document.getElementById('ly').value) ;
+        y = Number(document.getElementById('hoa').value) ;
+        z = Number(document.getElementById('sinh').value) ;
+        let tongd = x+y+z ;
+        document.getElementById('diem').innerHTML = tongd;}
+</script>
+<hr>
+Độ C :
+<input type="text" id="dc">
+<br>
+<br>
+<button id="doi" onclick="chuyendoi()">Chuyển Đổi</button>
+<br><br>
+Độ F :
+<span id="df"></span>
+<br>
+<br>
+<script>
+    function chuyendoi() {
+        var c = Number(document.getElementById("dc").value);
+        var cf = (9 * c) / 5 + 32;
+        document.getElementById("df").innerHTML = cf
+    }
+</script>
+<hr>
+Nhập bán kính R :<br>
+<input id="bankinh">
+<br><br>
+<span id="hienthidt"></span>
+<br>
+<button id="dientich" onclick="dientich()">Diện tích hình tròn</button>
+<br>
+<button id="chuvi" onclick="chuvi()">Chu vi hình tròn</button>
+<hr>
+<script>
+    function dientich() {
+        var r = Number(document.getElementById('bankinh').value) ;
+        var s = 3.14*r*r ;
+        document.getElementById('hienthidt').innerHTML = s ;}
+    function chuvi() {
+        var r = Number(document.getElementById('bankinh').value) ;
+        var chuvi = 3.14*r*2 ;
+        document.getElementById('hienthidt').innerHTML = chuvi ;}
+</script>
 
+</body>
+</html>
